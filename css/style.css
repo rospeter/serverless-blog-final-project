@@ -1,0 +1,55 @@
+body {
+  /* 系统字体优先 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.fade-in {
+  /* 淡入动画 */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    /* 初始状态：透明，稍微向上 */
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    /* 结束状态：完全显示 */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 深色模式样式 */
+.dark .prose {
+  /* 文章文字颜色 */
+  color: #c9d1d9;
+}
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose strong {
+  /* 标题和粗体白色 */
+  color: #ffffff;
+}
+.dark .prose a {
+  /* 链接颜色 */
+  color: #58a6ff;
+}
+
+/* 代码块样式 */
+.hljs {
+  /* 深色背景，圆角，内边距 */
+  background: #0d1117 !important;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #30363d;
+}
+
+html:not(.dark) .hljs {
+  /* 浅色模式代码块 */
+  background: #f6f8fa !important;
+  border: 1px solid #d0d7de;
+  color: #24292f;
+}
